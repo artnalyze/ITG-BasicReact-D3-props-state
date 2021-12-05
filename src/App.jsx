@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import About from "./pages/About";
+import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <Routes>
       <Route path="/" exact={true} element={<Home/>} />
       <Route path="/about" element={<About/>} />
+      <Route path="/cart" element={<Cart />}/>
     </Routes>
   );
 };
