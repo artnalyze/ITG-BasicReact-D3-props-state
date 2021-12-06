@@ -1,12 +1,61 @@
-import CartItems from "./CartItems"
+import CartItems from "./CartItems";
+
+const products = [
+  {
+    imgUrl:
+      "https://www.techxcite.com/topics/35592/filemanager/xiaomi_mi_11.jpg",
+    name: "Xiaomi MI 11",
+    price: 18000.0,
+    qty: 5,
+  },
+  {
+    imgUrl:
+      "https://consumer.huawei.com/content/dam/huawei-cbg-site/en/mkt/pdp/phones/p30-pro/P30Pro_share-img.jpg",
+    name: "Huawei P30 Pro",
+    price: 24000.0,
+    qty: 2,
+  },
+  {
+    imgUrl: "https://s.isanook.com/hi/0/ud/303/1516341/s21_1.jpg",
+    name: "Samsung Galaxy S21",
+    price: 45000.0,
+    qty: 3,
+  },
+  {
+    imgUrl:
+      "https://images.droidsans.com/wp-content/uploads/2021/01/reno5_360-b4fa44-1024x933.jpg",
+    name: "OPPO Reno 5",
+    price: 32000.0,
+    qty: 1,
+  },
+  {
+    imgUrl:
+      "https://www.iphone-droid.net/spec/wp-content/uploads/2020/09/Vivo-V20-Spec-and-Pricing-600x600.jpg",
+    name: "Vivo V20",
+    price: 16500.0,
+    qty: 10,
+  },
+];
 
 const Cart = () => {
-    return (
-        <div>
-            <CartItems name="Banana" price="30" qty="2" />
-            <CartItems name="Bread" price="15" qty="3" />
-        </div>
-    )
-}
+  return (
+    <div className="container">
+      <div className="row">
+        {products.map((product, index) => {
+          return (
+            <div className="col-md-4 my-3" key={index}>
+              <CartItems
+                imgurl={product.imgUrl}
+                name={product.name}
+                price={product.price}
+                qty={product.qty}
+              />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
-export default Cart
+export default Cart;
