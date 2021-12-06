@@ -44,12 +44,13 @@ const Cart = () => {
         {products.map((product, index) => {
           return (
             <div className="col-md-4 my-3" key={index}>
-              <CartItems
+              {/* <CartItems
                 imgurl={product.imgUrl}
                 name={product.name}
                 price={product.price}
                 qty={product.qty}
-              />
+              /> */}
+              <CartItems product={product} />
             </div>
           );
         })}
