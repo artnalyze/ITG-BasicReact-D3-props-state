@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Counter = () => {
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    setCounter(50);
+  },[]);
+
   return (
     <div>
       <h1>Counter: {counter}</h1>
