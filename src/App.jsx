@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
+import Counter from "./pages/Counter";
 import Home from "./pages/Home";
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <Route path="/" exact={true} element={<Home/>} />
       <Route path="/about" element={<About/>} />
       <Route path="/cart" element={<Cart />}/>
+      <Route path="/counter" element={<Counter />} />
     </Routes>
   );
 };
