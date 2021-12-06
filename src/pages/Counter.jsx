@@ -1,16 +1,12 @@
-const Counter = () => {
-  let counter = 0;
+import { useState } from "react";
 
-  const onChangeCounter = () => {
-    counter = counter + 1;
-    console.log(counter);
-  }
-  
+const Counter = () => {
+  const [counter, setCounter] = useState(0);
   return (
     <div>
       <h1>Counter: {counter}</h1>
-      <button onClick={onChangeCounter}>Counter +</button>
-      <button>Counter -</button>
+      <button onClick={() => setCounter(counter + 1)}>Counter +</button>
+      <button onClick={() => setCounter(counter - 1)}>Counter -</button>
     </div>
   );
 };
